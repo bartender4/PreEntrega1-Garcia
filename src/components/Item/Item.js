@@ -1,6 +1,7 @@
 import { Button, Card } from "react-bootstrap"
 import { Row } from "react-bootstrap"
 import { Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const Item = ({id, name, img, price, stock}) => {
     return(
@@ -15,7 +16,7 @@ const Item = ({id, name, img, price, stock}) => {
                         <p> Stock disponible {stock} </p>
                     </Card.Text>
                     <footer className="card-footer">
-                        <Button>Ver detalle</Button>
+                        <Link to={`/item/${id}`} className='btn btn-dark' >Ver detalle</Link>
                     </footer>
                     </Card.Body>
                 </Card>

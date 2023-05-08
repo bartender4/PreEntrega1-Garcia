@@ -1,11 +1,15 @@
 import ItemCount from "../ItemCount/ItemCount";
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+
 
 const ItemDetail = ({id, name, img, category, description, price, stock}) => {
     return(
-        <Card>
-            <Card.Img variant="top" src={img} />
+        <Container>
+        <Card style={{ width: '18rem' }} >
+           <Card.Img variant="top" src={img} />
             <Card.Body>
+                 
                 <Card.Title> {name} </Card.Title>
                 <Card.Text>
                     <p>Categoria: {category}</p>
@@ -17,6 +21,8 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) => {
                 </footer>
             </Card.Body>
         </Card>
+        </Container>
+        
     )
 }
 

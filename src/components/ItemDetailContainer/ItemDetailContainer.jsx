@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getProductById } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
@@ -20,9 +21,9 @@ const ItemDetailContainer = () => {
     }, [itemId])
     
     return(
-        <div>
+        <Container>
             <ItemDetail {...product} />
-        </div>
+        </Container>
     )
 }
 
